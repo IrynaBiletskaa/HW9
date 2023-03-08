@@ -85,7 +85,7 @@ def main():
         command, contact_data = command_parser(user_input)
         if command:
             print(command(*contact_data))
-        elif user_input == '.':
+        if user_input in ['.', 'good bye', 'close', 'exit']:
             break
         else:
             print('Such command does not exist. Enter anoter command.')
